@@ -1,0 +1,112 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.0.2</version>
+<!--    <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+  </parent>
+
+  <groupId>cn.edu.zust.se.smarttravel</groupId>
+  <artifactId>smarttravel</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+
+  <name>smarttravel</name>
+  <url>http://maven.apache.org</url>
+  <modules>
+    <module>common</module>
+    <module>User</module>
+  </modules>
+
+  <properties>
+<!--    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+    <java.version>17</java.version>
+    <app.version>1.0.0-SNAPSHOT</app.version>
+    <spring-cloud.version>2022.0.0</spring-cloud.version>
+    <spring.cloud.alibaba.version>2022.0.0.0-RC2</spring.cloud.alibaba.version>
+    <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+    <dubbo.version>3.2.7</dubbo.version>
+  </properties>
+
+<!--  <dependencies>-->
+<!--    <dependency>-->
+<!--      <groupId>org.projectlombok</groupId>-->
+<!--      <artifactId>lombok</artifactId>-->
+<!--      <optional>true</optional>-->
+<!--      <scope>compile</scope>-->
+<!--    </dependency>-->
+<!--  </dependencies>-->
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>${spring.cloud.alibaba.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+        <version>2.3.1</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>mybatis-plus-boot-starter</artifactId>
+        <version>${mybatis-plus.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>2.6</version>
+      </dependency>
+
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <scope>runtime</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid-spring-boot-starter</artifactId>
+        <version>1.1.23</version>
+      </dependency>
+
+      <!-- 跨域开始 -->
+      <dependency>
+        <groupId>com.thetransactioncompany</groupId>
+        <artifactId>cors-filter</artifactId>
+        <version>1.7</version>
+      </dependency>
+      <dependency>
+        <groupId>com.thetransactioncompany</groupId>
+        <artifactId>java-property-utils</artifactId>
+        <version>1.9</version>
+      </dependency>
+      <!-- 跨域结束 -->
+
+    </dependencies>
+  </dependencyManagement>
+
+</project>
