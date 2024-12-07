@@ -7,15 +7,15 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>User</artifactId>
+    <artifactId>Route</artifactId>
     <packaging>jar</packaging>
 
-<!--    <name>User</name>-->
-<!--    <url>http://maven.apache.org</url>-->
+    <name>Route</name>
+    <url>http://maven.apache.org</url>
 
-<!--    <properties>-->
-<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
-<!--    </properties>-->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -30,7 +30,7 @@
         </dependency>
         <dependency>
             <groupId>cn.edu.zust.se.smarttravel</groupId>
-            <artifactId>Route</artifactId>
+            <artifactId>User</artifactId>
             <version>1.0.0</version>
         </dependency>
 
@@ -87,6 +87,7 @@
             <version>1.0.0</version>
             <scope>compile</scope>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

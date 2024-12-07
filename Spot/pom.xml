@@ -7,15 +7,8 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>User</artifactId>
+    <artifactId>Spot</artifactId>
     <packaging>jar</packaging>
-
-<!--    <name>User</name>-->
-<!--    <url>http://maven.apache.org</url>-->
-
-<!--    <properties>-->
-<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
-<!--    </properties>-->
 
     <dependencies>
         <dependency>
@@ -25,7 +18,7 @@
         </dependency>
         <dependency>
             <groupId>cn.edu.zust.se.smarttravel</groupId>
-            <artifactId>Spot</artifactId>
+            <artifactId>User</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>

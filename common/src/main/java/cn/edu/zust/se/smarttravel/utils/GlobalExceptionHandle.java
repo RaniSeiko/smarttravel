@@ -1,6 +1,6 @@
 package cn.edu.zust.se.smarttravel.utils;
 
-import com.itczx.smarttourism.entity.R;
+import cn.edu.zust.se.smarttravel.entity.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ControllerAdvice;
