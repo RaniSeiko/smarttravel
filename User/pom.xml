@@ -18,21 +18,21 @@
 <!--    </properties>-->
 
     <dependencies>
-        <dependency>
-            <groupId>cn.edu.zust.se.smarttravel</groupId>
-            <artifactId>common</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.edu.zust.se.smarttravel</groupId>
-            <artifactId>Spot</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.edu.zust.se.smarttravel</groupId>
-            <artifactId>Route</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>cn.edu.zust.se.smarttravel</groupId>-->
+<!--            <artifactId>common</artifactId>-->
+<!--            <version>1.0.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>cn.edu.zust.se.smarttravel</groupId>-->
+<!--            <artifactId>Spot</artifactId>-->
+<!--            <version>1.0.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>cn.edu.zust.se.smarttravel</groupId>-->
+<!--            <artifactId>Route</artifactId>-->
+<!--            <version>1.0.0</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -87,6 +87,7 @@
             <version>1.0.0</version>
             <scope>compile</scope>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
