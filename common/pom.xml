@@ -22,21 +22,21 @@
     </properties>
 
         <dependencies>
-            <dependency>
-                <groupId>cn.edu.zust.se.smarttravel</groupId>
-                <artifactId>Route</artifactId>
-                <version>1.0.0</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.edu.zust.se.smarttravel</groupId>
-                <artifactId>Spot</artifactId>
-                <version>1.0.0</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.edu.zust.se.smarttravel</groupId>
-                <artifactId>User</artifactId>
-                <version>1.0.0</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>cn.edu.zust.se.smarttravel</groupId>-->
+<!--                <artifactId>Route</artifactId>-->
+<!--                <version>1.0.0</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>cn.edu.zust.se.smarttravel</groupId>-->
+<!--                <artifactId>Spot</artifactId>-->
+<!--                <version>1.0.0</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>cn.edu.zust.se.smarttravel</groupId>-->
+<!--                <artifactId>User</artifactId>-->
+<!--                <version>1.0.0</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -115,12 +115,13 @@
                 <groupId>com.fasterxml.jackson.datatype</groupId>
                 <artifactId>jackson-datatype-jsr310</artifactId>
             </dependency>
-            <dependency>
-                <groupId>cn.edu.zust.se.smarttravel</groupId>
-                <artifactId>Route</artifactId>
-                <version>1.0.0</version>
-                <scope>compile</scope>
-            </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>cn.edu.zust.se.smarttravel</groupId>-->
+<!--                <artifactId>Route</artifactId>-->
+<!--                <version>1.0.0</version>-->
+<!--                <scope>compile</scope>-->
+<!--            </dependency>-->
         </dependencies>
 
 </project>

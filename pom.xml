@@ -19,7 +19,6 @@
   <modules>
     <module>common</module>
     <module>User</module>
-<!--    <module>Route</module>-->
     <module>Spot</module>
     <module>Route</module>
   </modules>

@@ -1,11 +1,13 @@
 package cn.edu.zust.se.smarttravel.service.impl;
 
+
 import cn.edu.zust.se.smarttravel.entity.R;
+import cn.edu.zust.se.smarttravel.entity.po.User;
 import cn.edu.zust.se.smarttravel.mapper.UserMapper;
 import cn.edu.zust.se.smarttravel.service.UserService;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 

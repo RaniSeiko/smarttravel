@@ -81,12 +81,6 @@
             <artifactId>spring-cloud-openfeign-core</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>cn.edu.zust.se.smarttravel</groupId>
-            <artifactId>common</artifactId>
-            <version>1.0.0</version>
-            <scope>compile</scope>
-        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
