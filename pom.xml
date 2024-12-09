@@ -21,7 +21,6 @@
     <module>User</module>
     <module>Spot</module>
     <module>Route</module>
-    <module>utils</module>
   </modules>
 
   <properties>
