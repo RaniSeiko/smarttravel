@@ -140,6 +140,12 @@ public class RouteServiceImpl extends ServiceImpl<RouteMapper, Route> implements
     }
 
     @Override
+    public R<Route> addRoute(Route route) {
+        this.save(route);
+        return R.success("新增路线成功", this.getById(route.getId()));
+    }
+
+    @Override
     public List<Route> getAllRoutesByUserId(Long userid) {
 
         LambdaQueryWrapper<Route> queryWrapper = new LambdaQueryWrapper<>();

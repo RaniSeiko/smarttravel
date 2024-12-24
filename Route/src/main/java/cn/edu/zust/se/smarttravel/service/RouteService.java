@@ -10,6 +10,8 @@ public interface RouteService extends IService<Route> {
 
     R<Route> saveRoute(Route route);
 
+    R<Route> addRoute(Route route);
+
     List<Route> getAllRoutesByUserId(Long userid);
 
     Route endingRoute(Long routeId,Double funding);
