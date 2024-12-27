@@ -19,6 +19,12 @@ public class RouteController {
 
     @Resource
     private RouteService routeService;
+    @PostMapping("/add")
+    public R<Route> addRoute(@RequestBody Route route){
+        log.info("行程数据:{}",route);
+        return routeService.addRoute(route);
+    }
+
     @PostMapping("/save")
     public R<Route> saveRoute(@RequestBody Route route){
         log.info("行程数据:{}",route);

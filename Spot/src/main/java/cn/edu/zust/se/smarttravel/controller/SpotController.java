@@ -72,6 +72,7 @@ public class SpotController {
      * @return R<Spot>
      */
     @GetMapping("/id")
+    @Transactional
     public R<Spot> getSpotById(@RequestParam Long id) {
         log.info("获取id:{}的景点信息",id);
         return spotService.getSpotById(id);
@@ -91,12 +92,13 @@ public class SpotController {
     /**
      * 删除景点
      *
-     * @param spotId 景点id
+     * @param id 景点id
      * @return R<String>
      */
-    @DeleteMapping()
-    public R<String> delete(@RequestParam Long spotId) {
-        log.info("删除景点，id:{}", spotId);
-        return  spotService.removeById(spotId)?R.success("景点删除成功"):R.error("删除失败");
+    @DeleteMapping("del")
+    @Transactional
+    public R<String> delete(@RequestParam Long id) {
+        log.info("删除景点，id:{}", id);
+        return  spotService.removeById(id)?R.success("景点删除成功"):R.error("删除失败");
     }
 }

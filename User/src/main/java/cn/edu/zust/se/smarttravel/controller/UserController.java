@@ -61,7 +61,7 @@ public class UserController {
      * @param id 用户id
      * @return R<User>
      */
-    @GetMapping("/id")
+    @GetMapping("/{id}")
     public R<User>  getUserById(@RequestParam Long id) {
         log.info("查询id:{}的用户信息",id);
         System.out.println("111");
