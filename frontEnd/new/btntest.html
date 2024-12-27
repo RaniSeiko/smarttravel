@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 定义动画 */
+        @keyframes enterFromTop {
+            0% {
+                transform: translateY(-80px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes leaveToTop {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-80px);
+                opacity: 0;
+            }
+        }
+
+        /* 返回按钮的基本样式 */
+        .return-button {
+            position: fixed;
+            top: 80px;
+            left: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: wheat;
+            text-decoration: none;
+            font-size: 16px;
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+            transform: 0.3s ease-out;
+        }
+
+        /* 鼠标悬停时应用进入动画 */
+        .return-button:hover,
+        .return-button.is-visible {
+            animation: enterFromTop 0.3s forwards;
+        }
+
+        /* 鼠标离开后的隐藏动画，假设有一个辅助类 '.is-leaving' */
+        .return-button.is-leaving {
+            animation: leaveToTop 0.3s forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="return-button">返回</button>
+    <script>
+        // 获取按钮元素
+        var backButton = document.querySelector('.return-button');
+
+        // 监听整个文档区域的鼠标移动事件
+        document.addEventListener('mousemove', function (e) {
+            var mouseY = e.clientY;
+
+            // 当鼠标在0-100px范围内时
+            if (mouseY <= 100) {
+                // 显示按钮动画
+                backButton.classList.add('is-visible');
+                backButton.classList.remove('is-leaving');
+            } else {
+                // 鼠标离开后延时一段时间再隐藏，避免频繁闪烁
+                setTimeout(function () {
+                    if (!backButton.matches(':hover')) {
+                        backButton.classList.remove('is-visible');
+                        backButton.classList.add('is-leaving');
+                    }
+                }, 200); // 可以调整这个延时值以适应不同的交互需求
+            }
+        });
+
+        // 可选地，为按钮添加mouseleave事件以确保鼠标离开按钮时立即隐藏
+        backButton.addEventListener('mouseleave', function () {
+            this.classList.remove('is-visible');
+            this.classList.add('is-leaving');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>个性化定制</title>
+    <link rel="stylesheet" href="personal.css"></link>
+</head>
+
+<body>
+    <button id="return-button" class="return-button">
+        <span class="X"></span>
+    </button>
+    <div id="text" class="title">
+        <p class="cn">在 您 的 个 人 页 面 定 制 ！</p>
+        <p>Customize for yourself !</p>
+    </div>
+    <div class="logo"></div>
+    <div id="edit-profile-modal" class="modal fade show" role="dialog">
+        <div class="modal-content">
+            <p class="title1">在此编辑您的资料卡片:</p>
+            <p class="title2">Click to change！</p>
+            <br>
+            <form method="POST" action="">
+                <div class="edit-inputs1">
+                    <div class="edit-item">
+                        <input class="name" type="text" value="wjx" readonly />
+                    </div>
+                    <div class="edit-item">
+                        <label for="history-trips">历史出行</label>
+                        <input type="number" min="0" max="99" step="1" value="13" disabled />
+                        <span>次</span>
+                    </div>
+                    <span class="username">
+                        <input type="text" id="username" class="dlu">
+                    </span>
+                    <span class="pswd">
+                        <input type="password" class="dlp" id="password">
+                    </span>
+                    <br>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="edit-profile-modal2" class="modal fade show2" role="dialog">
+        <div class="modal-content">
+            <p class="title3">在此为您的行程添加个性化:</p>
+            <p class="title4">Personalize Your Travel！</p>
+            <br>
+            <form method="POST" action="">
+                <div class="edit-inputs2">
+                    <div id="customization-container">
+                        <label for="poverty">穷游</label><input type="range" min="0" max="100" value="60" step="1"
+                            oninput="output.value = this.value"><label for="poverty">富游</label><span
+                            id="poverty-output"></span>
+                        <br />
+                        <br />
+                        <label for="culture">文化</label><input type="range" min="0" max="100" value="30" step="1"
+                            oninput="output.value = this.value">
+                            <label for="culture">商业</label><span
+                            id="culture-output"></span>
+                        <br />
+                        <br />
+                        <label for="leisure">休闲</label><input type="range" min="0" max="100" value="70" step="1"
+                            oninput="output.value = this.value">
+                            <label for="leisure">紧凑</label><span
+                            id="leisure-output"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="baocun">
+        <button id="submit">save</button>
+    </div>
+    <script src="personal.js"></script>
+</body>
+
+</html>

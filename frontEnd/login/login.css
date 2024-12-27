@@ -1,0 +1,300 @@
+body {
+    background-image: url("../imgs/login/login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+p {
+    font-family: SourceHanSansCN-ExtraLight;
+    font-weight: 100;
+    font-size: 22px;
+    margin: 18px;
+    color: rgb(0, 0, 0, 0.7);
+}
+
+.top {
+    height: 80px;
+    width: 100%;
+}
+
+.top p:first-child {
+    float: left;
+}
+
+.top p:last-child {
+    float: right;
+}
+
+.bottom {
+    position: fixed;
+    top: 60%;
+    width: 100%;
+}
+
+.bottom p:first-child {
+    float: left;
+}
+
+.bottom p:last-child {
+    float: right;
+}
+
+.fuyao {
+    position: absolute;
+    top: 56%;
+    left:50%;
+    transform: translateX(-71px);
+    font-size: 55px;
+}
+
+.logo {
+    position: fixed;
+    top: 48%;
+    left: 48%;
+    width: 60px;
+    height: 30px;
+}
+
+.username {
+    width: 250px;
+    height: 25px;
+    position: fixed;
+    border: 1px solid black;
+    border-radius: 20px;
+    left: 50%;
+    top: 82%;
+    transform: translateX(-50%);
+    background-image: url(../imgs/login/username-img.png);
+    background-repeat: no-repeat;
+    background-size: 8px 11px;
+    background-position: 5% 50%;
+    background-color: #fff;
+}
+
+
+.pswd {
+    width: 250px;
+    height: 25px;
+    position: fixed;
+    border: 1px solid black;
+    border-radius: 20px;
+    left: 50%;
+    top: 87%;
+    transform: translateX(-50%);
+    background-image: url(../imgs/login/password-img.png);
+    background-repeat: no-repeat;
+    background-size: 8px 11px;
+    background-position: 5% 48%;
+    background-color: #fff;
+}
+
+/*input和button设置*/
+input {
+    position: relative;
+    border: 0;
+    height: 15px;
+    width: 200px;
+    outline: none;
+}
+
+button {
+    width: 90px;
+    height: 28px;
+    border: 1px solid rgb(255, 255, 255, 0.4);
+    background-color: black;
+    color: rgb(255, 255, 255, 0.4);
+    text-align: center;
+    font-family: SourceHanSansCN-ExtraLight;
+    font-weight: 100;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+/* 按钮停留样式 */
+button:hover{
+    background-color: rgba(25, 61, 139, 0.6);
+}
+
+.username input {
+    top: 30%;
+    left: 15%;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+
+input[type="password"]::-ms-reveal {
+    position: absolute;
+    right: 5px; /* 根据需要调整距离输入框右侧的距离，这里设置为距离右侧5像素 */
+    top: 50%;
+    transform: translateY(-50%); /* 让图标在垂直方向上居中对齐 */
+    width: 20px;
+    height: 15px;
+    display:none;
+}
+
+.pswd input {
+    font-size: 35px;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0, 0.7);
+}
+
+/*设置竖线*/
+.username::after,
+.pswd::after {
+    content: "";
+    height: 14px;
+    width: 0.5px;
+    background-color: black;
+    position: absolute;
+    left: 12%;
+    top: 25%;
+}
+
+.btn {
+    width: 250px;
+    height: 28px;
+    position: fixed;
+    top: 92.5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.register {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.begin {
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* 注册框开始 */
+.registerForm {
+    display: none;
+}
+
+/*设置账号框*/
+.zcusername {
+    width: 275px;
+    height: 28px;
+    position: fixed;
+    border: 1px solid black;
+    border-radius: 20px;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+
+.zcusername input {
+    width: 150px;
+    top: 37.5%;
+    left: 27%;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+
+.zcusername p {
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    font-size: 11px;
+    margin: 0 auto;
+    letter-spacing: 2px;
+}
+
+/*设置注册密码框*/
+.pswd1,
+.pswd2 {
+    width: 275px;
+    height: 28px;
+    position: fixed;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.pswd1 {
+    left: 50%;
+    top: 85%;
+    transform: translateX(-50%);
+}
+
+.pswd2 {
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+}
+
+
+.pswd1 input,
+.pswd2 input {
+    width: 150px;
+    font-size: 35px;
+    top: 50%;
+    left: 27%;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0, 0.7);
+}
+
+.pswd1 p {
+    position: absolute;
+    left: 8%;
+    top: 25%;
+    font-size: 11px;
+    margin: 0 auto;
+    letter-spacing: 4px;
+}
+
+.pswd2 p {
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    font-size: 11px;
+    margin: 0 auto;
+    letter-spacing: 2px;
+}
+
+/* 设置竖线 */
+.zcusername::after,
+.pswd1::after,
+.pswd2::after {
+    content: "";
+    height: 8px;
+    width: 0.5px;
+    background-color: black;
+    position: absolute;
+    left: 25%;
+    top: 38%;
+}
+
+/* 按钮设置 */
+
+.zcbtn {
+    width: 225px;
+    height: 30px;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.register2{
+    float: left;
+}
+
+.return {
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

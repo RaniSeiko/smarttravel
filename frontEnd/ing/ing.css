@@ -1,0 +1,252 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* 确保地图填充整个可视区域 */
+    z-index: -1;
+    /* 确保地图在页面内容之下 */
+}
+
+p {
+    font-family: SourceHanSansCN-ExtraLight;
+    font-weight: 100;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.main {
+    background-color: #fff;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    transform: translateX(-5px);
+    bottom: 0;
+    border-radius: 50px 50px 0 0;
+    box-shadow: 15px #757575;
+    display: flex;
+    flex-grow: 1;
+}
+
+.left {
+    width: 150px;
+    height: 100px;
+    float: left;
+    transform: translate(135px, 30px);
+}
+
+.date {
+    width: 190px;
+    height: 36px;
+    border: 1px solid black;
+    transform: translateY(20px);
+    border-radius: 20px;
+}
+
+.left img {
+    width: 135px;
+    height: 68px;
+    position: relative;
+    left: 20%;
+}
+
+.date p {
+    line-height: 50%;
+    letter-spacing: 2px;
+}
+
+.date .year {
+    float: left;
+    margin-left: 20px;
+}
+
+.date .month {
+    float: right;
+    margin-right: 20px;
+}
+
+.mid {
+    width: 800px;
+    height: 150px;
+    margin: 25px auto;
+}
+
+.mid img {
+    position: relative;
+    left: 54%;
+    transform: translateX(-50%);
+}
+
+.return-button:hover{
+    background-color: #a3a6abba;
+}
+
+/* 结束按钮 */
+.right .over {
+    background-color: #54b3f7;
+    width: 225px;
+    height: 45px;
+    border: 0 solid;
+    border-radius: 25px;
+}
+
+.right .over:hover{
+    background-color: #0d89e2;
+}
+
+.right {
+    position: relative;
+    width: 225px;
+    height: 120px;
+    float: right;
+    transform: translate(-100px, 45px);
+}
+
+.over p {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 5px;
+    line-height: 15px;
+}
+
+/* cost按钮 */
+.cost {
+    background-color: #52E4A1;
+    width: 225px;
+    height: 46px;
+    border: 0 solid;
+    border-radius: 25px;
+    position: relative;
+    bottom: -25px;
+}
+
+.p1 {
+    color: white;
+    float: left;
+    font-size: 12px;
+    height: 25px;
+    width: 60px;
+    letter-spacing: 2px;
+    line-height: 23px;
+    position: relative;
+    left: 12.5%;
+}
+
+.p1::after {
+    content: "";
+    height: 24px;
+    width: 0.5px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translate(10px, -50%);
+}
+
+.p2 {
+    color: white;
+    float: right;
+    font-size: 12px;
+    height: 25px;
+    width: 60px;
+    letter-spacing: 2px;
+    line-height: 23px;
+    position: relative;
+    right: 20%;
+}
+
+/*返回按钮动画开始*/
+@keyframes enterFromTop {
+    0% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes leaveToTop {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}
+
+/* 鼠标悬停时应用进入动画 */
+.return-button:hover,
+.return-button.is-visible {
+    animation: enterFromTop 0.5s forwards;
+}
+
+/* 鼠标离开后的隐藏动画，假设有一个辅助类 '.is-leaving' */
+.return-button.is-leaving {
+    animation: leaveToTop 0.5s forwards;
+}
+
+.X {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50%;
+}
+
+.X::before,
+.X::after {
+    content: "";
+    position: absolute;
+    background-color: #666666;
+    width: 2px;
+    height: 20px;
+}
+
+.X::before {
+    transform: rotate(-45deg);
+}
+
+.X::after {
+    transform: rotate(45deg);
+}
+
+.return-button {
+    position: fixed;
+    top: 0;
+    left: 43.5%;
+    transform: translateX(-50%);
+    top: 15px;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    transform: 0.5s ease-out;
+    border: 0 solid;
+    border-radius: 40px;
+    width: 225px;
+    height: 45px;
+    z-index: 10;
+    display: inline;
+}
